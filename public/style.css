@@ -166,7 +166,7 @@ body {
 }
 
 .message.received {
-    background: white;
+    background: #d5d5d5;
     color: #1a1a1a;
     margin-right: auto;
     border-bottom-left-radius: 4px;

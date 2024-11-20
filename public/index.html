@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tagged Random Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="tag-selection" class="tag-selection">
+        <h1>Enter Your Interest</h1>
+        <form id="interest-form" class="interest-form">
+            <input 
+                type="text" 
+                id="interest-input" 
+                placeholder="Type your interest (e.g., music, gaming, movies)"
+                maxlength="20"
+                required
+            >
+            <button type="submit" class="interest-btn">
+                <i class="fas fa-arrow-right"></i> Start Chatting
+            </button>
+        </form>
+        <p class="interest-hint">Enter any topic you'd like to chat about</p>
+    </div>
+
+    <div id="chat-container" class="chat-container hidden">
+        <div class="chat-header">
+            <div class="header-content">
+                <h1>Random Chat</h1>
+                <div class="current-tag"></div>
+            </div>
+            <div id="status" class="status">Connecting...</div>
+        </div>
+        <div class="messages" id="messages"></div>
+        <div id="typing-indicator" class="typing-indicator hidden">
+            Stranger is typing<span>.</span><span>.</span><span>.</span>
+        </div>
+        <div class="chat-controls">
+            <form id="message-form" class="message-form">
+                <input type="text" id="message-input" placeholder="Type your message..." autocomplete="off" disabled>
+                <button type="submit" class="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+            <div class="action-buttons">
+                <button id="skip-btn" class="skip-btn" disabled>
+                    <i class="fas fa-forward"></i> Skip
+                </button>
+                <button id="change-tag-btn" class="change-tag-btn">
+                    <i class="fas fa-tags"></i> Change Interest
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="js/ui.js" type="module"></script>
+    <script src="js/chat.js" type="module"></script>
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>

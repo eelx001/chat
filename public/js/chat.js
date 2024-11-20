@@ -12,7 +12,7 @@ export class Chat {
     }
 
     this.currentTag = tag;
-    this.ws = new WebSocket(`ws://${window.location.host}`);
+    this.ws = new WebSocket(`wss://${window.location.host}`);
     this.setupWebSocket();
     this.ui.showChat(tag);
   }
